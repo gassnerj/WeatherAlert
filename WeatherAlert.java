@@ -52,6 +52,7 @@ public class WeatherAlert extends Application {
 		//Alert.getJSON("https://api.weather.gov/alerts/NWS-IDP-PROD-2402446-2257179");
 
 		Alert.GetJsonNode("https://api.weather.gov/alerts/active/");
+			//TOOD http://docs.oracle.com/javafx/2/ui_controls/table-view.htm
         Scene scene = new Scene(root);
 
 
