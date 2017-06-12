@@ -72,6 +72,9 @@ public class Alert {
 				JsonNode headlineNode = node.path("headline");
     			JsonNode hailSizeNode = node.path("parameters").path("hailSize");
     			JsonNode windGustNode = node.path("parameters").path("windGust");
+    			JsonNode descriptionNode = node.path("description");
+    			JsonNode areaDesc = node.path("areaDesc");
+
 
     			HashMap<String, JsonNode> map = new HashMap<String, JsonNode>();
 
@@ -81,7 +84,8 @@ public class Alert {
 				map.put("headline", headlineNode);
 				map.put("hailSize", hailSizeNode);
 				map.put("windGust", windGustNode);
-
+				map.put("description", descriptionNode);
+				map.put("areaDesc", areaDesc);
 				System.out.println(idNode + " " + eventNode + " " + severityNode + " " + headlineNode + " " + hailSizeNode + " " + windGustNode);
 				return map;
 
@@ -96,7 +100,7 @@ public class Alert {
     		JsonNode windGustNode = node.findValue("hailSizeNode");
 
 			HashMap<String, JsonNode> map = new HashMap<String, JsonNode>();
-
+//TODO add new fields here to match above.
 			map.put("id", idNode);
 			map.put("event", eventNode);
 			map.put("severity", severityNode);
